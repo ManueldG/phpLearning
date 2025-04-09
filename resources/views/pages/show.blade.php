@@ -26,7 +26,7 @@
 
 
                 <x-slot name="description">
-                    <span class="whitespace-pre-wrap">{{ __($page->description) }}</span>
+                    <span class="whitespace-pre-wrap text-base">{{ __($page->description) }}</span>
                 </x-slot>
 
                 <x-slot name="form" >
