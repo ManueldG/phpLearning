@@ -15,9 +15,11 @@ class CopyUsersSeeders extends Seeder
      */
     public function run(): void
     {
-        Schema::dropIfExists('tmp');
+        /*
 
-        Schema::create('tmp', function (Blueprint $table) {
+        Schema::dropIfExists('tmp'); // elimina tabella tmp se esiste
+
+        Schema::create('tmp', function (Blueprint $table) { // crea tabella tmp
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
@@ -31,10 +33,36 @@ class CopyUsersSeeders extends Seeder
             $table->timestamp("two_factor_confirmed_at")->nullable();
             $table->timestamps();
         });
+        */
 
-        dump (DB::connection()->getPdo( 0)->query('SELECT * FROM users limit 5')->getColumnMeta(1));
 
+        // dump (DB::connection()->getPdo( 0)->query('SELECT * FROM users limit 5')->getColumnMeta(1)); //recupera struttura del campo
+
+        // elenca colonna dettagli
+        /*
         $users = (DB::table('users')->get());
+
+        $tmp = [];
+
+
+        foreach ($users as $k=>$user) {
+
+            $count = 0;
+
+            foreach ($user as $key=>$u) {
+
+                dump(DB::connection()->getPdo( 0)->query('SELECT * FROM users limit 5')->getColumnMeta($count++)['sqlite:decl_type'],$key);
+                $tmp[$k][$key] = $u;
+
+            }
+
+        }*/
+        // ----
+
+
+        // recupera i valori della tabella
+       /*
+       $users = (DB::table('users')->get());
 
         $tmp = [];
 
@@ -46,12 +74,23 @@ class CopyUsersSeeders extends Seeder
 
             }
 
-        }
+        } */
 
+        /*
         foreach ($tmp as $val) {
 
             DB::table('tmp')->insert($val);
 
         }
+            */
+            // inserisci i dati nell'array
+
+            $file_path = resource_path('../database/export.sql');
+
+            DB::unprepared(
+                file_get_contents($file_path)
+            );
+            //usa l'export sql come seeder
+
      }
 }
