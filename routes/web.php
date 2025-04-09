@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\PageLearn;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AskController;
 use App\Http\Controllers\PageLearnController;
@@ -30,7 +29,6 @@ Route::middleware([
 
     Route::resource('page',PageLearnController::class)->except(['show','index']);
 });
-
 
 Route::resource('page',PageLearnController::class)->only(['show','index'])->parameters(['page'=>'page']);
 
