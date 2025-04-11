@@ -31,9 +31,3 @@ Route::middleware([
 });
 
 Route::resource('page',PageLearnController::class)->only(['show','index'])->parameters(['page'=>'page']);
-
-
-
-
-
-

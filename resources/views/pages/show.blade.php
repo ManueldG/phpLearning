@@ -45,10 +45,8 @@
             </x-my-form>
 
             <div class="w-full">
-                <div class="m-3 flex-wrap overflow-x-auto">
-
-                    {!! $result ?? "" !!}
-
+                <div class="m-3 whitespace-pre-wrap overflow-x-auto">
+{!! $result ?? "" !!}
                 </div>
             </div>
 

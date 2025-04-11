@@ -5,3 +5,9 @@
 [x-cloak] {
     display: none;
 }
+
+* {
+    --tw-shadow-colored: var(--tw-shadow-color) !important;
+  }
+
+

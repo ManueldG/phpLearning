@@ -1,5 +1,5 @@
 
-<x-profile-layout>
+<x-profile-layout :class="' w-full h-full '">
 
     <form class="flex flex-col" action="/page/{{ $page->id }}" method="POST">
 
@@ -13,7 +13,7 @@
         @enderror
 
         <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="{{ old('title') ?? $page->title }}" class="@error('title') is-invalid @enderror">
+        <input type="text" name="title" id="title" value="{{ old('title') ?? $page->title }}"  class="@error('title') is-invalid @enderror">
 
         @error('description')
 
@@ -21,7 +21,7 @@
 
         @enderror
         <label for="description" >Description</label>
-        <textarea type="text" name="description" id="description" class="@error('description') is-invalid @enderror">{{ old('description') ?? $page->description }}</textarea>
+        <textarea type="text" name="description" id="description" rows="10" cols="10" class="@error('description') is-invalid @enderror">{{ old('description') ?? $page->description }}</textarea>
 
         @error('example')
 
@@ -29,7 +29,7 @@
 
         @enderror
         <label for="example" >Example</label>
-        <textarea type="text" name="example" id="example"  class="@error('example') is-invalid @enderror">{{ old('example') ?? $page->example }}</textarea>
+        <textarea type="text" name="example" id="example" rows="10" cols="10" class="@error('example') is-invalid @enderror">{{ old('example') ?? $page->example }}</textarea>
 
         <x-button class="my-2 justify-center" type="submit">
             Submit

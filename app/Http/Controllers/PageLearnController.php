@@ -83,7 +83,7 @@ class PageLearnController extends Controller
                 dump($e);
             }
 
-        return view('pages.show',compact('page','result'));
+        return view('pages.show',compact('page','result','code'));
     }
 
     /**

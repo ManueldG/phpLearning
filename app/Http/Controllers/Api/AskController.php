@@ -15,7 +15,6 @@ class AskController extends Controller
      */
     public function index(Request $request)
     {
-
         // recover the code from the request
         $code = $request->all()['code'];
 
@@ -72,7 +71,7 @@ class AskController extends Controller
             }
 
          // return response json with state 'ok'
-         return view('components.console' ,compact('result'))->with([
+         return view('components.console' ,compact('result','code'))->with([
 
             'message' => 'The page expired, please try again.',
 
