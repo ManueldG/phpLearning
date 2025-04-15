@@ -31,7 +31,9 @@
 
                     @method('GET')
                     @csrf
-                    <div class="w-5/6 bg-black text-green-400">/><input class="w-[97.5%] bg-black text-green-400 border-0 border-none focus:border-transparent px-0 focus:shadow-transparent" name="code" type="text" placeholder="insert code" value="{{ $code }}"></div>
+                    <div class="w-5/6 bg-black text-green-400">
+                        <input class="w-[97.5%] bg-black text-green-400 border-0 border-none focus:border-transparent px-0 focus:shadow-transparent" name="code" type="text" placeholder="insert code" value="{{ $code }}">
+                    </div>
 
                 </x-slot>
 
