@@ -5,4 +5,3 @@ deployment:
     - /usr/local/bin/php /home3/manuelcc/composer.phar self-update
     - /usr/local/bin/php /home3/manuelcc/composer.phar update
     - /usr/local/bin/php /home3/manuelcc/composer.phar install
-
