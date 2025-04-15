@@ -2,7 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home3/manuelcc/api.manueldellagala.it/
-    - /usr/local/bin/php /home3/manuelcc/composer.phar self-update
-    - /usr/local/bin/php /home3/manuelcc/composer.phar update
     - /usr/local/bin/php /home3/manuelcc/composer.phar install
 
