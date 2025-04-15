@@ -5,4 +5,6 @@ deployment:
     - /usr/local/bin/ea-php83 /home3/manuelcc/composer.phar self-update
     - /usr/local/bin/ea-php83 /home3/manuelcc/composer.phar update
     - /usr/local/bin/ea-php83 /home3/manuelcc/composer.phar install
+    - \. "$HOME/.nvm/nvm.sh"
+    - npm install
 
