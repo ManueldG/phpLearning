@@ -7,5 +7,6 @@ deployment:
     - /usr/local/bin/ea-php83 artisan storage:link
     - \. "$HOME/.nvm/nvm.sh"
     - npm install
+    - npm run dev
     - npm run build
 
