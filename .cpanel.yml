@@ -3,7 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home3/manuelcc/api.manueldellagala.it/
     - /usr/local/bin/ea-php83 /home3/manuelcc/composer.phar install
-    - cd api
+    - /usr/local/bin/ea-php83 artisan
     - /usr/local/bin/ea-php83 artisan storage:link
     - \. "$HOME/.nvm/nvm.sh"
     - npm install
