@@ -73,7 +73,7 @@ unset($__defined_vars); ?>
 
 
                  <?php $__env->slot('description', null, []); ?> 
-                    <span class="whitespace-pre-wrap"><?php echo e(__($page->description)); ?></span>
+                    <span class="whitespace-pre-wrap text-base"><?php echo e(__($page->description)); ?></span>
                  <?php $__env->endSlot(); ?>
 
                  <?php $__env->slot('form', null, []); ?> 
@@ -102,10 +102,8 @@ unset($__defined_vars); ?>
 <?php endif; ?>
 
             <div class="w-full">
-                <div class="m-3 flex-wrap overflow-x-auto">
-
-                    <?php echo $result ?? ""; ?>
-
+                <div class="m-3 whitespace-pre-wrap overflow-x-auto">
+<?php echo $result ?? ""; ?>
 
                 </div>
             </div>

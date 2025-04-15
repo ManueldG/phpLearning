@@ -8,7 +8,7 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\App\View\Components\ProfileLayout::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes([]); ?>
+<?php $component->withAttributes(['class' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(' w-full h-full ')]); ?>
 
     <form class="flex flex-col" action="/page/<?php echo e($page->id); ?>" method="POST">
 
@@ -29,7 +29,7 @@ endif;
 unset($__errorArgs, $__bag); ?>
 
         <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="<?php echo e(old('title') ?? $page->title); ?>" class="<?php $__errorArgs = ['title'];
+        <input type="text" name="title" id="title" value="<?php echo e(old('title') ?? $page->title); ?>"  class="<?php $__errorArgs = ['title'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -51,7 +51,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
         <label for="description" >Description</label>
-        <textarea type="text" name="description" id="description" class="<?php $__errorArgs = ['description'];
+        <textarea type="text" name="description" id="description" rows="10" cols="10" class="<?php $__errorArgs = ['description'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -73,7 +73,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
         <label for="example" >Example</label>
-        <textarea type="text" name="example" id="example"  class="<?php $__errorArgs = ['example'];
+        <textarea type="text" name="example" id="example" rows="10" cols="10" class="<?php $__errorArgs = ['example'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }

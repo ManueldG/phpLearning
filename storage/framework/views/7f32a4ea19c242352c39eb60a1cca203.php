@@ -69,7 +69,7 @@ if (isset($__slots)) unset($__slots);
 
                     <div class="flex flex-row justify-center max-w-7xl mx-auto sm:px-6 lg:px-8">
 
-                        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
+                        <div  <?php echo e($attributes->merge(['class' => 'bg-white overflow-hidden shadow-xl sm:rounded-lg p-5'])); ?> >
 
                             <div class="px-3 bg-white border-b border-gray-200">
 

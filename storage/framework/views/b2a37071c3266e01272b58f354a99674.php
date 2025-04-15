@@ -116,7 +116,7 @@ unset($__defined_vars); ?>
 
                     <?php echo method_field('GET'); ?>
                     <?php echo csrf_field(); ?>
-                    <input class="w-5/6" name="code" type="text" placeholder="insert code">
+                    <div class="w-5/6 bg-black text-green-400">/><input class="w-[97.5%] bg-black text-green-400 border-0 border-none focus:border-transparent px-0 focus:shadow-transparent" name="code" type="text" placeholder="insert code" value="<?php echo e($code); ?>"></div>
 
                  <?php $__env->endSlot(); ?>
 
@@ -132,9 +132,9 @@ unset($__defined_vars); ?>
 <?php endif; ?>
 
             <div class="w-5/6 ">
-                <div class="m-3 flex-wrap overflow-x-auto">
+                <div class="flex-wrap overflow-x-auto bg-black text-green-400 border-0 border-none">
 
-                    <?php echo $result ?? ""; ?>
+                    <?php echo ($result ? "/>".$result : "" ); ?>
 
 
                 </div>
