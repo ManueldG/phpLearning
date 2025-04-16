@@ -10,4 +10,18 @@
     --tw-shadow-colored: var(--tw-shadow-color) !important;
   }
 
+@media screen and (max-width: 600px){
 
+
+    .logo-tek:nth-child(1) {
+        order: 2
+    }
+
+    .logo-tek:nth-child(2) {
+        order: 1
+    }
+
+    .logo-tek:nth-child(3) {
+        order: 3
+    }
+}

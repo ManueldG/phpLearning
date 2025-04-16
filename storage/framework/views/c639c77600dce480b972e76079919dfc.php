@@ -49,19 +49,19 @@
     <div class="flex justify-center text-gray-200">
         Powered by
     </div>
-    <div class="flex justify-between text-gray-200">
+    <div class="flex justify-around flex-wrap sm:flex-nowrap text-gray-200">
 
-        <div class="flex items-center flex-col text-gray-200 m-7">
+        <div class="flex items-center flex-col logo-tek text-gray-200 m-7">
             <img class="w-24" src="https://phpsandbox.org/images/logo.png" alt="PHPSandbox">
             <div> © 2025 <a href="https://phpsandbox.org/" class="hover:underline"> PHPSandbox™</a>. All Rights Reserved.</div>
         </div>
 
-        <div class="flex items-center flex-col text-gray-200 m-7">
+        <div class="flex items-center flex-col logo-tek  text-gray-200 m-7">
             <img class="w-24" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel">
             <div> © 2025 <a href="https://www.laravel.com/" class="hover:underline">Laravel™</a>. All Rights Reserved.</div>
         </div>
 
-        <div class="flex items-center flex-col text-gray-200 m-7">
+        <div class="flex items-center flex-col logo-tek text-gray-200 m-7">
             <img class="w-10 " src="https://flowbite.com/docs/images/logo.svg" alt="Flowbite">
             <div>© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™ </a>. All Rights Reserved.</div>
         </div>
