@@ -68,7 +68,4 @@
 
     </div>
 </footer>
-
-
-
 <?php /**PATH C:\Users\Manuel\OneDrive\Pictures\Documents\Sviluppo\multidb\api\resources\views/components/footer.blade.php ENDPATH**/ ?>
