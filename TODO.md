@@ -7,7 +7,7 @@
 |    Licenza     |Per ora uso quella di Laravel  |                    |       |
 |  Trovare un modo per portare sqlite su mysql   |  posso creare un seeder con l'export di sqlite ma <br>non è compatibile con mysql forse CSV  |                    |       |
 |    admin    || non ho creato dei ruoli ma semplicemnete l'id 1 è l'admin||
-| Lingue  || ho creato la struttura da aggioranre i termini||
+| Lingue  || ho creato la struttura da aggioranre i termini mancano delle traduzioni nel profilo e nell'email||
 
 
 ## License
