@@ -29,7 +29,7 @@
     "Add additional security to your account using two factor authentication.": "Aggiungi ulteriore sicurezza al tuo account utilizzando l'autenticazione a due fattori.",
     "You have enabled two factor authentication.": "Hai abilitato l'autenticazione a due fattori.",
     "You have not enabled two factor authentication.": "Non hai abilitato l'autenticazione a due fattori.",
-    "When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application. ": "Quando l'autenticazione a due fattori è abilitata, ti verrà richiesto un token sicuro e casuale durante l'autenticazione. Puoi recuperare questo token dall'app Google Authenticator del tuo telefono.",
+    "When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.": "Quando l'autenticazione a due fattori è abilitata, ti verrà richiesto un token sicuro e casuale durante l'autenticazione. Puoi recuperare questo token dall'app Google Authenticator del tuo telefono.",
     "Browser Sessions": "Sessioni del Browser",
     "Manage and log out your active sessions on other browsers and devices.": "Gestisci e disconnetti le tue sessioni attive su altri browser e dispositivi.",
     "This device": "Questo dispositivo",
@@ -50,7 +50,12 @@
     "Create": "Crea",
     "Last used": "Ultimo Utilizzo",
     "Manage API Tokens":"Gestisci Token API",
-    "You may delete any of your existing tokens if they are no longer needed.": "Puoi eliminire i token esistenti se non sono più necessari."
+    "You may delete any of your existing tokens if they are no longer needed.": "Puoi eliminire i token esistenti se non sono più necessari.",
+    "Hello!":"Ciao!",
+    "Please click the button below to verify your email address.":"Per favore clicca sul bottone qui sotto per verificare il tuo indirizzo email.",
+    "Before continuing, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.":"Prima di continuare, potresti verificare il tuo indirizzo email cliccando su link che ti abbiamo appena inviato per email? Se non l'hai ancora ricevuta te ne manderemo volentieri un'altra."
+
+
 }
 
 
