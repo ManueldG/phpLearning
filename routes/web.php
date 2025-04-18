@@ -8,12 +8,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-
-
 Route::get('/policy', function () {
     return to_route('terms.show');
 });
-
 
 Route::middleware([
     'auth:sanctum',
