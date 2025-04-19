@@ -54,9 +54,17 @@
     "Hello!":"Ciao!",
     "Verify Email Address":"Verifica l'Indirizzo Email",
     "Please click the button below to verify your email address.":"Per favore clicca sul bottone qui sotto per verificare il tuo indirizzo email.",
-    "Before continuing, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.":"Prima di continuare, potresti verificare il tuo indirizzo email cliccando su link che ti abbiamo appena inviato per email? Se non l'hai ancora ricevuta te ne manderemo volentieri un'altra."
-
-
+    "Before continuing, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.":"Prima di continuare, potresti verificare il tuo indirizzo email cliccando su link che ti abbiamo appena inviato per email? Se non l'hai ancora ricevuta te ne manderemo volentieri un'altra.",
+    "If you did not create an account, no further action is required.":"Se non hai creato un'account, questa azione non è necessaria.",
+    "Regards,":"Saluti,",
+    "If you're having trouble clicking the ":"Se riscontri problemi a cliccare sul pulsante ",
+    "button, copy and paste the URL below into your web browser:":", copia e incolla l'URL sottostante nel tuo browser web:",
+    "Resend Verification Email":"Rinvia Email di verifica",
+    "Edit Profile":"Edita il Profilo",
+    "Log Out":"Disconnettiti",
+    "A new verification link has been sent to the email address you provided in your profile settings.":"Un nuovo link di verifica è stato inviato al tuo indirizzo email che hai fornito nelle impostazioni del profilo.",
+    "If you're having trouble clicking the ":"Se hai problemi a cliccare il pulsante \"",
+    " button, copy and paste the URL below into your web browser:":"\" copia e incolla l'URL qui sotto nel tuo browser:"
 }
 
 
