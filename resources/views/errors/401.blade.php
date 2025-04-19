@@ -1,15 +1,15 @@
 <x-minimal-layout>
 
     <x-slot:title>
-        {{__('Not Found')}}
+        {{__('Unauthorized')}}
     </x-slot:title>
 
     <x-slot:code>
-        {{__('404')}}
+        {{__('401')}}
     </x-slot:code>
 
     <x-slot:message>
-        {{__('Not Found')}}
+        {{__('Unauthorized')}}
     </x-slot:message>
 
 </x-minimal-layout>
