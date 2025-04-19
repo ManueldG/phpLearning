@@ -19,13 +19,13 @@ Route::middleware([
     'verified',
 ])->group(function () {
 
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->name('dashboard');
 
-    Route::get('/console', [AskController::class,'action'])->name('console');
+        Route::get('/console', [AskController::class,'action'])->name('console');
 
-    Route::resource('page',PageLearnController::class)->except(['show','index']);
+        Route::resource('page',PageLearnController::class)->except(['show','index']);
 });
 
 Route::resource('page',PageLearnController::class)->only(['show','index'])->parameters(['page'=>'page']);
