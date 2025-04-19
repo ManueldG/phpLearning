@@ -5,10 +5,18 @@
 |                | Da Fare                       | In esecuzione      | Fatto |
 |----------------|-------------------------------|--------------------|-------|
 |    Licenza     |Per ora uso quella di Laravel  |                    |       |
-|  Trovare un modo per portare sqlite su mysql   |  posso creare un seeder con l'export di sqlite ma <br>non è compatibile con mysql forse CSV  |                    |       |
+|  spostare il DB su mysql |posso creare un seeder con l'export di sqlite ma <br>non è compatibile con mysql CSV  |   |       |
 |    admin    || non ho creato dei ruoli ma semplicemnete l'id 1 è l'admin||
 | Lingue  || ho creato la struttura da aggioranre i termini mancano delle traduzioni nel profilo e nell'email||
 
+
+ ## ToDo
+ 
+spostare il database su mysql
+
+impostare un admin per nascondere agli altri utenti le funzioni team e api token
+
+includere tutto il testo in __() per la gestione delle lingue
 
 ## License
 
@@ -156,15 +164,23 @@ ho testato le pagine d'errore con la funzione abort() es.: abort(404) dentro la 
 
 fin qui non ho errori
 
+ php artisan stub:publish
+
+pubblica tutti i template per esempio php artisan make
+
+ php artisan vendor:publish
+
+pubblicato i modelli Mail (23)
+
+    php artisan vendor:publish
+
+pubblicato modelli notification (24)
+
+ho modificato vendor/mail/html/subcopy.blade.php
+e vendor/notifications/email.blade.php
+e aggiunto la traduzione in lang/it.json per far funzionare la traduzione
 ---------------------------------
 
- ## ToDo
- 
-spostare il database su mysql
-
-impostare un admin per nascondere agli altri utenti le funzioni team e api token
-
-includere tutto il testo in __() per la gestione delle lingue
 
  ## Task svolti e consigli 
 
