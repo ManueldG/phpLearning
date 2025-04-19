@@ -131,26 +131,44 @@ la configuarazione in .env
             MAIL_FROM_ADDRESS="info@manueldellagala.it"
             MAIL_FROM_NAME="${APP_NAME}"
 
+per creare pagine d'errore custom
+
+        php artisan vendor:publish --tag=laravel-errors
+
+ho spostato da errors/minimal.blade.php in layouts 
+
+quindi ho creato in app/View/Components/MinimalLayout.php 
+
+         public function render(): View|Closure|string
+    {
+        return view('layouts.minimal');
+    }
+
+i modelli usano la vecchia versione di Blade e l'ho aggiornati alla nuova usando x-component
+
+ora personalizzo i modelli con logo errore e link per tornare indietro
+
 
 
 ---------------------------------
 
  # ToDo
 
+creare error pages custom
  
 spostare il database su mysql
 
 impostare un admin per nascondere agli altri utenti le funzioni team e api token
-
-un template per tutti o più navbar? ok fatta da testare
 
 per i button in javascript usare listner ok
 
 trovare una route interna per il parsing del codice da interpretare ok fatta una route
 
 includere tutto il testo in __() per la gestione delle lingue
+
+
+
+
 fatto creare una console da usare nella pagina test e da riusare nella pagina learning
 
-
-
-
+un template per tutti o più navbar? ok fatta da testare
