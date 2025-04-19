@@ -148,34 +148,31 @@ i modelli usano la vecchia versione di Blade e l'ho aggiornati alla nuova usando
 
 ora personalizzo i modelli con logo errore e link per tornare indietro
 
-devo vedere come creare il link go back con un timer 
+in app.js ho creato un listner onload associata alla funzione setTimeOut come callback per far si di tornare alla pagina 
 
-creato in app.js creato listner onload associata alla funzione setTimeOut come callback
+precedente a quella che da errore
 
 ho testato le pagine d'errore con la funzione abort() es.: abort(404) dentro la rotta web "/"
 
 fin qui non ho errori
 
-
-
 ---------------------------------
 
- # ToDo
-
-creare error pages custom
+ ## ToDo
  
 spostare il database su mysql
 
 impostare un admin per nascondere agli altri utenti le funzioni team e api token
 
-per i button in javascript usare listner ok
+includere tutto il testo in __() per la gestione delle lingue
+
+ ## Task svolti e consigli 
+
+per i button in javascript usare listner 
 
 trovare una route interna per il parsing del codice da interpretare ok fatta una route
 
-includere tutto il testo in __() per la gestione delle lingue
-
-
-
+creare error pages custom
 
 fatto creare una console da usare nella pagina test e da riusare nella pagina learning
 
