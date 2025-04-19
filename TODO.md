@@ -150,7 +150,11 @@ ora personalizzo i modelli con logo errore e link per tornare indietro
 
 devo vedere come creare il link go back con un timer 
 
-ho testato le pagine d'errore con la funzione abort() es.: abort(404) dentro la rotta web "/""
+creato in app.js creato listner onload associata alla funzione setTimeOut come callback
+
+ho testato le pagine d'errore con la funzione abort() es.: abort(404) dentro la rotta web "/"
+
+fin qui non ho errori
 
 
 
