@@ -19,20 +19,44 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-xl mx-auto sm:px-6 lg:px-8 text-center">
                 <div class="flex items-center pt-8 sm:justify-start sm:pt-0">
+
+                    <a href="<?php echo e(url()->previous()); ?>"> <?php if (isset($component)) { $__componentOriginal8892e718f3d0d7a916180885c6f012e7 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal8892e718f3d0d7a916180885c6f012e7 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.application-logo','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('application-logo'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal8892e718f3d0d7a916180885c6f012e7)): ?>
+<?php $attributes = $__attributesOriginal8892e718f3d0d7a916180885c6f012e7; ?>
+<?php unset($__attributesOriginal8892e718f3d0d7a916180885c6f012e7); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal8892e718f3d0d7a916180885c6f012e7)): ?>
+<?php $component = $__componentOriginal8892e718f3d0d7a916180885c6f012e7; ?>
+<?php unset($__componentOriginal8892e718f3d0d7a916180885c6f012e7); ?>
+<?php endif; ?></a>
+
                     <div class="px-4 text-lg text-gray-500 border-r border-gray-400 tracking-wider">
-                        <?php echo $__env->yieldContent('code'); ?>
                         <?php echo e($code); ?>
 
                     </div>
 
                     <div class="ml-4 text-lg text-gray-500 uppercase tracking-wider">
-                        <?php echo $__env->yieldContent('message'); ?>
                         <?php echo e($message); ?>
 
                     </div>
+
                 </div>
+
+                <a class="text-lg text-gray-500 uppercase tracking-wider" href="<?php echo e(url()->previous()); ?>"><?php echo e(__('Go back')); ?></a>
+
             </div>
         </div>
     </body>

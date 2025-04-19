@@ -1,3 +1,4 @@
+
 <?php if(auth()->guard()->check()): ?>
 
     <?php if (isset($component)) { $__componentOriginal9ac128a9029c0e4701924bd2d73d7f54 = $component; } ?>

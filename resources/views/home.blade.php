@@ -1,3 +1,4 @@
+
 @auth
 
     <x-app-layout>

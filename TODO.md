@@ -148,6 +148,10 @@ i modelli usano la vecchia versione di Blade e l'ho aggiornati alla nuova usando
 
 ora personalizzo i modelli con logo errore e link per tornare indietro
 
+devo vedere come creare il link go back con un timer 
+
+ho testato le pagine d'errore con la funzione abort() es.: abort(404) dentro la rotta web "/""
+
 
 
 ---------------------------------

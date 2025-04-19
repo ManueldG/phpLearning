@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\AskController;
 use App\Http\Controllers\PageLearnController;
 
 Route::get('/', function () {
+    /*abort(503); */ // funzione per testare le pagine d'errore
     return view('home');
 })->name('home');
 

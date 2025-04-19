@@ -1,4 +1,3 @@
-
 <?php if (isset($component)) { $__componentOriginal3ead5760848878974bd34d96acfc16e3 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal3ead5760848878974bd34d96acfc16e3 = $attributes; } ?>
 <?php $component = App\View\Components\MinimalLayout::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -11,17 +10,17 @@
 <?php $component->withAttributes([]); ?>
 
      <?php $__env->slot('title', null, []); ?> 
-        <?php echo e(__('Not Found')); ?>
+        <?php echo e(__('Forbidden')); ?>
 
      <?php $__env->endSlot(); ?>
 
      <?php $__env->slot('code', null, []); ?> 
-        <?php echo e(__('404')); ?>
+        <?php echo e(__('403')); ?>
 
      <?php $__env->endSlot(); ?>
 
      <?php $__env->slot('message', null, []); ?> 
-        <?php echo e(__('Not Found')); ?>
+        <?php echo e(__('Forbidden')); ?>
 
      <?php $__env->endSlot(); ?>
 
@@ -38,5 +37,4 @@
 
 
 
-
-<?php /**PATH C:\Users\Manuel\OneDrive\Pictures\Documents\Sviluppo\multidb\api\resources\views/errors/404.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\Manuel\OneDrive\Pictures\Documents\Sviluppo\multidb\api\resources\views/errors/403.blade.php ENDPATH**/ ?>
