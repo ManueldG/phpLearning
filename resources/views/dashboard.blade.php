@@ -3,11 +3,13 @@
     <x-slot:header >
 
         <header class="bg-white shadow my-2">
+
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
 
                 <x-title />
 
             </div>
+
         </header>
 
     </x-slot>

@@ -66,24 +66,33 @@ class PageLearnController extends Controller
     public function show(PageLearn $page,Request $request)
     {
 
+
         $sandbox = new PHPSandbox();
 
         $code = $request->all()['code'] ?? "";
+
+        $error = null;
+
+        $result = null;
 
          // redirect output to return
         $sandbox->capture_output = true;
 
             $sandbox->setOption('allow_functions', true);
 
+
             try{
 
-                $result = $sandbox->execute($code,1);
+                $result = $sandbox->execute($code,0);
+
             }
             catch(Error $e){
-                dump($e);
+
+                $error = $e->getPrevious()->getMessage();
+
             }
 
-        return view('pages.show',compact('page','result','code'));
+        return view('pages.show',compact('page','result','code'))->with(compact('error'));
     }
 
     /**

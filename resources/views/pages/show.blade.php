@@ -45,9 +45,7 @@
             </x-my-form>
 
             <div class="w-full">
-                <div class="m-3 whitespace-pre-wrap overflow-x-auto">
-{!! $result ?? "" !!}
-                </div>
+                <div class="m-3 whitespace-pre-wrap overflow-x-auto">{!! $result ?? "<div class='text-red-700'>" . $error . "</div>" !!}</div>
             </div>
 
         </div>
