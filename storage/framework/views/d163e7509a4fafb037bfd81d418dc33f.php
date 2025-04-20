@@ -39,6 +39,8 @@
            È possibile usare le API esposte usando l'endpoint/api/ask?code=< codice da provare>
            con cUrl:
 
+
+
            <pre class="text-green-400 bg-gray-800 my-3">
 />curl   -X GET /api/ask
     -H "Content-Type: application/json; charset=utf-8"
