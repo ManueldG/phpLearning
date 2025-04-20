@@ -64,7 +64,9 @@
     "Log Out":"Disconnettiti",
     "A new verification link has been sent to the email address you provided in your profile settings.":"Un nuovo link di verifica è stato inviato al tuo indirizzo email che hai fornito nelle impostazioni del profilo.",
     "If you're having trouble clicking the ":"Se hai problemi a cliccare il pulsante \"",
-    " button, copy and paste the URL below into your web browser:":"\" copia e incolla l'URL qui sotto nel tuo browser:"
+    " button, copy and paste the URL below into your web browser:":"\" copia e incolla l'URL qui sotto nel tuo browser:",
+    "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.":"",
+    "We have emailed your password reset link. ":""
 }
 
 
