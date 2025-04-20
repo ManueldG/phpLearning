@@ -179,10 +179,35 @@ pubblicato modelli notification (24)
 ho modificato vendor/mail/html/subcopy.blade.php
 e vendor/notifications/email.blade.php
 e aggiunto la traduzione in lang/it.json per far funzionare la traduzione
+
+tradurre
+ Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+
+We have emailed your password reset link. 
+
+Ciao!
+
+You are receiving this email because we received a password reset request for your account.
+Reset Password
+
+This password reset link will expire in 60 minutes.
+
+If you did not request a password reset, no further action is required.
+
+For your security, please confirm your password to continue. 
+
+Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices. 
+
+Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account. 
+
 ---------------------------------
 
 
  ## Task svolti e consigli 
+
+{{ trans_choice('{0} There :form :count apples|{1} There :form just :count apple|[2,19] There :form :count apples', 0, ['form' => 'is']) }}
+
+scrive la stringa in base al valore
 
 per i button in javascript usare listner 
 
