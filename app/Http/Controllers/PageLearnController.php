@@ -29,7 +29,6 @@ class PageLearnController extends Controller
     public function create()
     {
         return view('pages.create');
-
     }
 
     /**
@@ -56,7 +55,7 @@ class PageLearnController extends Controller
 
         $page->save();
 
-        return "ok";
+        return redirect('/page')->with('status', 'Page saved!!');
 
     }
 
@@ -65,8 +64,6 @@ class PageLearnController extends Controller
      */
     public function show(PageLearn $page,Request $request)
     {
-
-
         $sandbox = new PHPSandbox();
 
         $code = $request->all()['code'] ?? "";
@@ -79,7 +76,6 @@ class PageLearnController extends Controller
         $sandbox->capture_output = true;
 
             $sandbox->setOption('allow_functions', true);
-
 
             try{
 
@@ -109,8 +105,6 @@ class PageLearnController extends Controller
      */
     public function update(Request $request, PageLearn $page)
     {
-
-
         $request->validate( [
             'title'=>'required|unique:page_learns,' . $page->id,
 
@@ -126,7 +120,7 @@ class PageLearnController extends Controller
         $page->example = $value['example'];
         $page->save();
 
-        return redirect('/page');
+        return redirect('/page')->with('status', 'Page updated!!');
 
     }
 
@@ -136,7 +130,7 @@ class PageLearnController extends Controller
     public function destroy(PageLearn $pageLearn)
     {
         $pageLearn->delete();
-        return redirect()->route('page.index');
+        return redirect()->route('page.index')->with('status', 'Page deleted!!');
 
     }
 }
