@@ -8,7 +8,7 @@
 |  spostare il DB su mysql |posso creare un seeder con l'export di sqlite ma <br>non è compatibile con mysql CSV  |   |       |
 |    admin    || non ho creato dei ruoli ma semplicemnete l'id 1 è l'admin||
 | Lingue  || ho creato la struttura da aggioranre i termini mancano delle traduzioni nel profilo e nell'email||
-| pagina articolo inserito  || ora c'è una pagina che stampa ok ||
+| pagina articolo inserito aggiornato cancellato ||  | ho aggiunto un redirect alla index con il messaggio dell'aggiornamento|
 
  ## ToDo
  
