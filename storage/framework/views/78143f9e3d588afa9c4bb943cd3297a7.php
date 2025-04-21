@@ -42,32 +42,13 @@ unset($__defined_vars); ?>
 
      <?php $__env->slot('header', null, []); ?> 
 
-    <header class="bg-white shadow my-2">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <header class="bg-white shadow my-2">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
 
-           <?php if (isset($component)) { $__componentOriginala29c4b6de1220dbc50317dc759b47929 = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginala29c4b6de1220dbc50317dc759b47929 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.title','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('title'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginala29c4b6de1220dbc50317dc759b47929)): ?>
-<?php $attributes = $__attributesOriginala29c4b6de1220dbc50317dc759b47929; ?>
-<?php unset($__attributesOriginala29c4b6de1220dbc50317dc759b47929); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginala29c4b6de1220dbc50317dc759b47929)): ?>
-<?php $component = $__componentOriginala29c4b6de1220dbc50317dc759b47929; ?>
-<?php unset($__componentOriginala29c4b6de1220dbc50317dc759b47929); ?>
-<?php endif; ?>
+                <h2><?php echo $page->title; ?></h2>
 
-        </div>
-    </header>
+            </div>
+        </header>
 
      <?php $__env->endSlot(); ?>
 
@@ -85,40 +66,27 @@ unset($__defined_vars); ?>
 <?php $component->withAttributes(['submit' => 'invio','class' => 'grow','action' => '/console','method' => 'get','target' => '_self']); ?>
 
                  <?php $__env->slot('title', null, []); ?> 
-                    <?php if (isset($component)) { $__componentOriginala29c4b6de1220dbc50317dc759b47929 = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginala29c4b6de1220dbc50317dc759b47929 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.title','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('title'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginala29c4b6de1220dbc50317dc759b47929)): ?>
-<?php $attributes = $__attributesOriginala29c4b6de1220dbc50317dc759b47929; ?>
-<?php unset($__attributesOriginala29c4b6de1220dbc50317dc759b47929); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginala29c4b6de1220dbc50317dc759b47929)): ?>
-<?php $component = $__componentOriginala29c4b6de1220dbc50317dc759b47929; ?>
-<?php unset($__componentOriginala29c4b6de1220dbc50317dc759b47929); ?>
-<?php endif; ?>
+                    <?php echo e($page->title); ?>
+
                  <?php $__env->endSlot(); ?>
 
-                 <?php $__env->slot('description', null, []); ?> 
-                    <?php echo e(__('')); ?>
 
+
+                 <?php $__env->slot('description', null, []); ?> 
+                    <span class="whitespace-pre-wrap text-base"><?php echo e(__($page->description)); ?></span>
                  <?php $__env->endSlot(); ?>
 
                  <?php $__env->slot('form', null, []); ?> 
 
                     <?php echo method_field('GET'); ?>
                     <?php echo csrf_field(); ?>
-                    <div class="w-5/6 bg-black text-green-400">
-                        /><input class="w-[97.5%] bg-black text-green-400 border-0 border-none focus:border-transparent px-0 focus:shadow-transparent"  name="code" type="text" placeholder="" value="<?php echo e($code); ?>">
-                    </div>
+                    <textarea id="id" class="w-full" name="code" type="text" placeholder="insert code" rows="7">
+<?php echo e($page->example ?? ""); ?>
+
+                    </textarea>
+
+                    <input type="submit" class="rounded-xl inline-block px-5 py-2 my-3 border-[#19140035] border text-[#1b1b18]  hover:border-[#19140035] text-sm leading-normal" value="<?php echo e(__('Enter')); ?>" >
+
 
                  <?php $__env->endSlot(); ?>
 
@@ -133,13 +101,8 @@ unset($__defined_vars); ?>
 <?php unset($__componentOriginalc01ad8e65f8891933bc1fb362935acb5); ?>
 <?php endif; ?>
 
-            <div class="w-5/6 ">
-                <div class="flex-wrap overflow-x-auto bg-black text-green-400 border-0 border-none">
-
-                    <?php echo ($result ? "/>".$result : ($error) ); ?>
-
-
-                </div>
+            <div class="w-full">
+                <div class="m-3 whitespace-pre-wrap overflow-x-auto"><?php echo $result ?? "<div class='text-red-700'>" . $error . "</div>"; ?></div>
             </div>
 
         </div>
@@ -155,4 +118,5 @@ unset($__defined_vars); ?>
 <?php unset($__componentOriginal9ac128a9029c0e4701924bd2d73d7f54); ?>
 <?php endif; ?>
 
-<?php /**PATH C:\Users\Manuel\OneDrive\Pictures\Documents\Sviluppo\multidb\api\resources\views/components/console.blade.php ENDPATH**/ ?>
+
+<?php /**PATH C:\Users\Manuel\OneDrive\Pictures\Documents\Sviluppo\multidb\api\resources\views/pages/show.blade.php ENDPATH**/ ?>

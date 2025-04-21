@@ -12,6 +12,7 @@
      <?php $__env->slot('header', null, []); ?> 
 
         <header class="bg-white shadow my-2">
+
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
 
                 <?php if (isset($component)) { $__componentOriginala29c4b6de1220dbc50317dc759b47929 = $component; } ?>
@@ -36,6 +37,7 @@
 <?php endif; ?>
 
             </div>
+
         </header>
 
      <?php $__env->endSlot(); ?>
@@ -60,7 +62,6 @@
 <?php $component = $__componentOriginal791d26948561d5a0da3d85fee400a7b6; ?>
 <?php unset($__componentOriginal791d26948561d5a0da3d85fee400a7b6); ?>
 <?php endif; ?>
-
 
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

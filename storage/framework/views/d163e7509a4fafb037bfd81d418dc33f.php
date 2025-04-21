@@ -38,19 +38,17 @@
        <div>
            È possibile usare le API esposte usando l'endpoint/api/ask?code=< codice da provare>
            con cUrl:
+            <pre class="text-green-400 bg-gray-800 my-3">
 
-
-
-           <pre class="text-green-400 bg-gray-800 my-3">
 />curl   -X GET /api/ask
     -H "Content-Type: application/json; charset=utf-8"
     -H "Authorization: Bearer &lt; token &gt; "
     -d "{ \"code\":\" echo+23%2B56%3B  \"}" // Url encoded  echo 23+56;
-           </pre >
+            </pre >
 
            oppure con Axios:
 
-           <pre class="text-white bg-gray-800 my-2">
+            <pre class="text-white bg-gray-800 my-2">
 
     axios.post(<span class="text-yellow-200">'/api/ask'</span>,
         {
@@ -69,14 +67,14 @@
     .catch(function (<span class="text-orange-400">error</span>) {
         console.log(<span class="text-orange-400">error</span>);
     });
+            </pre>
 
-        </pre>
+            nel menù utente andare su "API tokens" per generare il token da usare nell'opzione per l'autorizzazione es.:
 
-
-           nel menù utente andare su "API tokens" per generare il token da usare nell'opzione per l'autorizzazione es.:
-           <pre>
+            <pre>
 -H "Authorization: Bearer abcDfhiLmNoPqRst123456789 "
-           </pre>
+            </pre>
+
        </div>
     </div>
 
