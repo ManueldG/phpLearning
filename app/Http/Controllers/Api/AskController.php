@@ -56,6 +56,8 @@ class AskController extends Controller
          $sandbox = new PHPSandbox();
 
          $code = $request->all()['code'] ?? "";
+         $result = null;
+         $error = null;
 
 
          // redirect output to return
@@ -64,18 +66,14 @@ class AskController extends Controller
                     $sandbox->setOption('allow_functions', true);
             try{
 
-                $result = $sandbox->execute($code,1);
+                $result = $sandbox->execute($code,0);
             }
             catch(Error $e){
-                dump($e);
+                $error = $e->getPrevious()->getMessage();
             }
 
          // return response json with state 'ok'
-         return view('components.console' ,compact('result','code'))->with([
-
-            'message' => 'The page expired, please try again.',
-
-        ]);;
+         return view('components.console' ,compact('result','code','error'));
     }
 
     /**
