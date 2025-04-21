@@ -8,7 +8,7 @@
 |  spostare il DB su mysql |posso creare un seeder con l'export di sqlite ma <br>non è compatibile con mysql CSV  |   |       |
 |    admin    || non ho creato dei ruoli ma semplicemnete l'id 1 è l'admin||
 | Lingue  || ho creato la struttura da aggioranre i termini mancano delle traduzioni nel profilo e nell'email||
-
+| pagina articolo inserito  || ora c'è una pagina che stampa ok ||
 
  ## ToDo
  
@@ -179,6 +179,8 @@ pubblicato modelli notification (24)
 ho modificato vendor/mail/html/subcopy.blade.php
 e vendor/notifications/email.blade.php
 e aggiunto la traduzione in lang/it.json per far funzionare la traduzione
+
+scritto un feedback in caso d'errore in console
 
 tradurre
  Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
