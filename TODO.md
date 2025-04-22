@@ -180,7 +180,34 @@ ho modificato vendor/mail/html/subcopy.blade.php
 e vendor/notifications/email.blade.php
 e aggiunto la traduzione in lang/it.json per far funzionare la traduzione
 
-scritto un feedback in caso d'errore in console
+scritto un feedback in caso d'errore in console 
+passo un errore tramite l'eccezione generata in try .. catch
+
+creati messaggi di feedback per la creazione aggiornamento e cancellazione 
+
+nel controller
+
+    return redirect('/page')->with('status', 'Page updated!!');
+
+e nella view
+
+    @if (session('status'))
+
+        <div class="text-green-500">{{ __(session('status')) }}</div>
+
+    @endif
+
+ho creato un test email 
+
+    php artisan make:mail TestShipped 
+
+ha creato una classe che uso nella route
+
+    Route::get('/mail',function(){
+
+    Mail::to("manuel@manueldellagala.it")->send(new TestShipped());
+
+    });
 
 tradurre
  Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
