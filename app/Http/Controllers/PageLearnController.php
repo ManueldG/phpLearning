@@ -79,7 +79,7 @@ class PageLearnController extends Controller
 
             try{
 
-                $result = $sandbox->execute($code,0);
+                $result = $sandbox->execute($code,0);// non crea la pagina d'errore ma permette la generazione dell'eccezione
 
             }
             catch(Error $e){
