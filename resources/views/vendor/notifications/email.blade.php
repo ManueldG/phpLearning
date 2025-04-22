@@ -1,7 +1,7 @@
 <x-mail::message>
 {{-- Greeting --}}
 @if (! empty($greeting))
-# {{ $greeting }}
+# {{ __($greeting) }}
 @else
 @if ($level === 'error')
 # @lang('Whoops!')
