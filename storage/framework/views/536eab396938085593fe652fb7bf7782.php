@@ -51,7 +51,7 @@ if (session()->has($__sessionArgs[0])) :
 if (isset($value)) { $__sessionPrevious[] = $value; }
 $value = session()->get($__sessionArgs[0]); ?>
             <div class="mb-4 font-medium text-sm text-green-600">
-                <?php echo e($value); ?>
+                <?php echo e(__($value)); ?>
 
             </div>
         <?php unset($value);

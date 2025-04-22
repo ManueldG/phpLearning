@@ -10,7 +10,7 @@
 <?php $component->withAttributes([]); ?>
 
 <?php if(! empty($greeting)): ?>
-# <?php echo e($greeting); ?>
+# <?php echo e(__($greeting)); ?>
 
 <?php else: ?>
 <?php if($level === 'error'): ?>
