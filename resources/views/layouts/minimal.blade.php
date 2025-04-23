@@ -36,9 +36,9 @@
                     </div>
 
                 </div>
-
-                <a class="text-lg text-gray-500 uppercase tracking-wider" href="{{ url()->previous() }}">{{ __('Go back') }}</a>
-
+                @if($code!= '503')
+                    <a class="text-lg text-gray-500 uppercase tracking-wider" href="{{ url()->previous() }}">{{ __('Go back') }}</a>
+                @endif
             </div>
         </div>
     </body>
