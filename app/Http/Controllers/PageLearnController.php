@@ -71,15 +71,18 @@ class PageLearnController extends Controller
         $result = null;
 
          // redirect output to return
-        $sandbox->capture_output = true;
+        $sandbox->capture_output = env('CAPTURE_OUTPUT');        
+        $sandbox->setOption(env('ALLOW_CLASSES'));
+        $sandbox->setOption(env('ALLOW_CONSTANTS'));
+        $sandbox->setOption(env('ALLOW_FUNCTIONS'));
+        $sandbox->setOption(env('ALLOW_OPERATOR'));
+        $sandbox->setOption(env('ALLOW_VARIABLES'));        
 
-        $sandbox->setOption('allow_classes', true);
-        $sandbox->setOption('allow_constants', true);
-        $sandbox->setOption('allow_functions', true);
+        $sandbox->whitelistFunc(explode(',', env('WHITE_LIST_FUNC')));               
 
             try{
 
-                $result = $sandbox->execute($code,0);// non crea la pagina d'errore ma permette la generazione dell'eccezione
+                $result = $sandbox->execute($code,env('SKIP_VALIDATION'));// non crea la pagina d'errore ma permette la generazione dell'eccezione
 
             }
             catch(Error $e){
