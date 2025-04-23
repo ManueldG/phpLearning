@@ -57,9 +57,9 @@
                     </div>
 
                 </div>
-
-                <a class="text-lg text-gray-500 uppercase tracking-wider" href="<?php echo e(url()->previous()); ?>"><?php echo e(__('Go back')); ?></a>
-
+                <?php if($code!= '503'): ?>
+                    <a class="text-lg text-gray-500 uppercase tracking-wider" href="<?php echo e(url()->previous()); ?>"><?php echo e(__('Go back')); ?></a>
+                <?php endif; ?>
             </div>
         </div>
     </body>

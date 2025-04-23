@@ -1,4 +1,8 @@
+<?php if(session('status')): ?>
 
+<div class="text-red-500"><?php echo e(__(session('status'))); ?></div>
+
+<?php endif; ?>
 <?php if(auth()->guard()->check()): ?>
 
     <?php if (isset($component)) { $__componentOriginal9ac128a9029c0e4701924bd2d73d7f54 = $component; } ?>
@@ -47,6 +51,7 @@
 
         <div class="py-12">
             <div class="flex flex-row max-w-7xl mx-auto sm:px-6 lg:px-8">
+
                 <?php if (isset($component)) { $__componentOriginalfef18b83dad9fb9f477934ba01c89ca2 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalfef18b83dad9fb9f477934ba01c89ca2 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.home','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
