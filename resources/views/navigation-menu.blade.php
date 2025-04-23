@@ -115,7 +115,7 @@
                                 </x-dropdown-link>
                             @endif
 
-                            @if(Route::has('mail.form'))
+                            @if(Auth::user()->id==1)
                                 <x-dropdown-link href="{{ route('mail.form') }}">
                                     {{ __('Mail') }}
                                 </x-dropdown-link>
@@ -214,7 +214,7 @@
                     </x-responsive-nav-link>
                 @endif
 
-                @if(Route::has('mail.form'))
+                @if(Auth::user()->id==1)
                     <x-responsive-nav-link href="{{ route('mail.form') }}" :active="request()->routeIs('mail.form')">
                         {{ __('Mail') }}
                     </x-responsive-nav-link>
