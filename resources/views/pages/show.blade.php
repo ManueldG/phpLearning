@@ -23,16 +23,12 @@
                     {{ $page->title }}
                 </x-slot>
 
-
-
                 <x-slot name="description">
                     <span class="whitespace-pre-wrap text-base">{{ __($page->description) }}</span>
                 </x-slot>
 
                 <x-slot name="form" >
-
-                    @method('GET')
-                    @csrf
+                   
                     <textarea id="id" class="w-full" name="code" type="text" placeholder="insert code" rows="7">
 {{ $page->example ?? "" }}
                     </textarea>
@@ -46,6 +42,7 @@
 
             <div class="w-full">
                 <div class="m-3 whitespace-pre-wrap overflow-x-auto">{!! $result ?? "<div class='text-red-700'>" . $error . "</div>" !!}</div>
+                
             </div>
 
         </div>
