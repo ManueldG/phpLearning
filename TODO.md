@@ -9,6 +9,9 @@
 |    admin    || non ho creato dei ruoli ma semplicemnete l'id 1 è l'admin||
 | Lingue  || ho creato la struttura da aggioranre i termini mancano delle traduzioni nel profilo e nell'email||
 | pagina articolo inserito aggiornato cancellato ||  | ho aggiunto un redirect alla index con il messaggio dell'aggiornamento|
+| a volte non riporta l'errore nella pagina larning|| | X |
+| @metod e @cfrs appaiono 2 volte nel form ||  | X|
+| da rivedere la console in una pagina è nera in una è input:text in un altra textarea |X|  | |
 
  ## ToDo
  
@@ -222,8 +225,16 @@ modificato '/bootstrap/app.php' per creare un'alias
 
     $middleware->alias(['admin' => \App\Http\Middleware\Admin::class]);
 
+nella pagina blade uso
+    @if(Auth::user()->id==1)
+per le funzionalità dell'Admin
 
-tradurre
+Ho creato in .env una serie di opzioni per la configurazione di CodeSandBox 
+
+
+
+
+ ## tradurre
  Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
 
 We have emailed your password reset link. 
