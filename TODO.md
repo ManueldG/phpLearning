@@ -214,6 +214,14 @@ in AppServiceProvider.php
 
      View::addNamespace('mail', base_path('resources/views/vendor/mail/html'));
 
+creata nuova middleware con
+
+    php artisan  make:middleware Admin
+
+modificato '/bootstrap/app.php' per creare un'alias
+
+    $middleware->alias(['admin' => \App\Http\Middleware\Admin::class]);
+
 
 tradurre
  Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
