@@ -70,16 +70,12 @@ unset($__defined_vars); ?>
 
                  <?php $__env->endSlot(); ?>
 
-
-
                  <?php $__env->slot('description', null, []); ?> 
                     <span class="whitespace-pre-wrap text-base"><?php echo e(__($page->description)); ?></span>
                  <?php $__env->endSlot(); ?>
 
                  <?php $__env->slot('form', null, []); ?> 
-
-                    <?php echo method_field('GET'); ?>
-                    <?php echo csrf_field(); ?>
+                   
                     <textarea id="id" class="w-full" name="code" type="text" placeholder="insert code" rows="7">
 <?php echo e($page->example ?? ""); ?>
 
@@ -103,6 +99,7 @@ unset($__defined_vars); ?>
 
             <div class="w-full">
                 <div class="m-3 whitespace-pre-wrap overflow-x-auto"><?php echo $result ?? "<div class='text-red-700'>" . $error . "</div>"; ?></div>
+                
             </div>
 
         </div>

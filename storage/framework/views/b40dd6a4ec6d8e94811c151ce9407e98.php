@@ -280,7 +280,7 @@
 <?php endif; ?>
                             <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
 
-                            <!--[if BLOCK]><![endif]--><?php if(Route::has('mail.form')): ?>
+                            <!--[if BLOCK]><![endif]--><?php if(Auth::user()->id==1): ?>
                                 <?php if (isset($component)) { $__componentOriginal68cb1971a2b92c9735f83359058f7108 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal68cb1971a2b92c9735f83359058f7108 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.dropdown-link','data' => ['href' => ''.e(route('mail.form')).'']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -520,7 +520,7 @@
 <?php endif; ?>
                 <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
 
-                <!--[if BLOCK]><![endif]--><?php if(Route::has('mail.form')): ?>
+                <!--[if BLOCK]><![endif]--><?php if(Auth::user()->id==1): ?>
                     <?php if (isset($component)) { $__componentOriginald69b52d99510f1e7cd3d80070b28ca18 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginald69b52d99510f1e7cd3d80070b28ca18 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.responsive-nav-link','data' => ['href' => ''.e(route('mail.form')).'','active' => request()->routeIs('mail.form')]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
