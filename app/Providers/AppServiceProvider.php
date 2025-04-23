@@ -15,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->mergeConfigFrom(
+
+            __DIR__.'/../../config/sandbox.php', 'sandbox'
+
+        );
     }
 
     /**
@@ -26,5 +30,14 @@ class AppServiceProvider extends ServiceProvider
         Route::model('page', PageLearn::class);
         View::addNamespace('email', base_path('resources/views/emails'));
         View::addNamespace('mail', base_path('resources/views/vendor/mail/html'));
+
+        $this->publishes([
+
+            __DIR__.'/../../config/sandbox.php' => config_path('sandbox.php'),
+
+
+        ],'config');
+
+
     }
 }
