@@ -10,8 +10,6 @@ use Illuminate\Http\Request;
 
 class PageLearnController extends Controller
 {
-
-
     /**
      * Display a listing of the resource.
      */
@@ -75,7 +73,9 @@ class PageLearnController extends Controller
          // redirect output to return
         $sandbox->capture_output = true;
 
-            $sandbox->setOption('allow_functions', true);
+        $sandbox->setOption('allow_classes', true);
+        $sandbox->setOption('allow_constants', true);
+        $sandbox->setOption('allow_functions', true);
 
             try{
 
@@ -84,7 +84,7 @@ class PageLearnController extends Controller
             }
             catch(Error $e){
 
-                $error = $e->getPrevious()->getMessage();
+                $error = $e->getMessage();
 
             }
 
