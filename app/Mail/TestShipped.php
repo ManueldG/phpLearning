@@ -39,9 +39,9 @@ class TestShipped extends Mailable
     public function envelope(): Envelope
     {
         $envelope = new Envelope(
-            from: new Address('manuel.dellagala@gmail.com', 'Manuel'),
+            from: new Address(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME')),
             replyTo: [
-                new Address('manuel.dellagala@gmail.com', 'Manuel'),
+                new Address(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME')),
             ],
             subject: $this->subject,
         );
