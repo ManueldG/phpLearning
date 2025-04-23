@@ -115,6 +115,12 @@
                                 </x-dropdown-link>
                             @endif
 
+                            @if(Route::has('mail.form'))
+                                <x-dropdown-link href="{{ route('mail.form') }}">
+                                    {{ __('Mail') }}
+                                </x-dropdown-link>
+                            @endif
+
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
                             <!-- Authentication -->
@@ -208,6 +214,12 @@
                     </x-responsive-nav-link>
                 @endif
 
+                @if(Route::has('mail.form'))
+                    <x-responsive-nav-link href="{{ route('mail.form') }}" :active="request()->routeIs('mail.form')">
+                        {{ __('Mail') }}
+                    </x-responsive-nav-link>
+                @endif
+
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}" x-data>
                     @csrf
@@ -260,9 +272,7 @@
     </div>
 </nav>
 
-
-
-@if(0)
+@if(0) {!-- // XXX credo si possa togliere da verificare  --}
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     @if(0)
     <!-- Primary Navigation Menu -->
