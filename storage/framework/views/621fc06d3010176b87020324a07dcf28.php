@@ -1,0 +1,2 @@
+<div <?php echo e($attributes->class('flex-1')); ?> data-flux-spacer></div>
+<?php /**PATH C:\Users\Manuel\OneDrive\Pictures\Documents\Sviluppo\multidb\api\vendor\livewire\flux\stubs\resources\views\flux\spacer.blade.php ENDPATH**/ ?>
