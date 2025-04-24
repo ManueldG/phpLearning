@@ -15,9 +15,9 @@ class PageLearnController extends Controller
      */
     public function index()
     {
-        $pages = PageLearn::all();
+        $pages = PageLearn::paginate(3);
 
-        return view('pages.index',compact('pages'));
+        return view('pages.index',['pages'=> $pages]);
 
     }
 
@@ -93,7 +93,11 @@ class PageLearnController extends Controller
 
             }
 
-        return view('pages.show',compact('page','result','code'))->with(compact('error'));
+        return view('pages.show',[
+            'page' => $page,
+            'result' => $result,
+            'code' => $code,
+        ])->with(compact('error'));
     }
 
     /**
