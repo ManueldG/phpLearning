@@ -256,6 +256,21 @@ Are you sure you want to delete your account? Once your account is deleted, all 
 
 ---------------------------------
 
+ ## deploy
+
+    php artisan optimize
+
+    php artisan optimize:clear
+
+    php artisan config:cache
+
+    php artisan event:cache
+
+    php artisan route:cache
+
+    php artisan view:cache
+
+
 
  ## Task svolti e consigli 
 
