@@ -23,8 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Route::model('page', PageLearn::class);
-        View::addNamespace('email', base_path('resources/views/emails'));
+        Route::model('page', PageLearn::class); // invece di usare PageLearn nella rotta usa  /page/{page}
+        View::addNamespace('email', base_path('resources/views/emails')); // serve per usare i componennti <x-email::index /> che si trovano fuori view/components
         View::addNamespace('mail', base_path('resources/views/vendor/mail/html'));
 
 
