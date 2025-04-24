@@ -230,6 +230,7 @@ nella pagina blade uso
 per le funzionalità dell'Admin
 
 Ho creato in .env una serie di opzioni per la configurazione di CodeSandBox 
+in fase di produzione .env non viene usato e ho creato /config/sandbox.php che preleva la configurazione da .env e viene compilato in fase di produzione posso creare un provider nel caso dovessi creare il file tramite artisan config:publish
 
 
 
