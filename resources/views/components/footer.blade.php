@@ -5,19 +5,23 @@
                 <x-application-logo class="block h-14 w-auto" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{{ __('Interprete PHP') }}</span>
             </a>
-            @if(0)
+            @if(1)
                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+
                     <li>
-                        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                        <a href="https://github.com/ManueldG/phpLearning/issues/new?title=Bug%20Report&body=From%20page:%20{{ url()->current() }}%0A%0A---" class="hover:underline me-4 md:me-6 flex">
+                            <img src="/storage/github.svg" class="w-4 mx-1" alt="Bug report icon"> Bug report
+                        </a>
                     </li>
                     <li>
-                        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:underline">Contact</a>
+                        <a href="mailto:info@manueldellagala.it" class="hover:underline flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 mx-1">
+                                <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                                <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                            </svg>
+
+                            Contact
+                        </a>
                     </li>
                 </ul>
             @endif
