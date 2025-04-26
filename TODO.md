@@ -5,11 +5,11 @@
 |                | Da Fare                       | In esecuzione      | Fatto |
 |----------------|-------------------------------|--------------------|-------|
 |    Licenza     |Per ora uso quella di Laravel  |                    |       |
-|  spostare il DB su mysql |posso creare un seeder con l'export di sqlite ma <br>non è compatibile con mysql CSV  |   |       |
+|  spostare il DB su mysql | |   | Posso creare un seeder con Iseed e poi importarlo <br>in fase di migration|
 |    admin    || non ho creato dei ruoli ma semplicemnete l'id 1 è l'admin||
 | Lingue  || ho creato la struttura da aggioranre i termini mancano delle traduzioni nel profilo e nell'email||
 | pagina articolo inserito aggiornato cancellato ||  | ho aggiunto un redirect alla index con il messaggio dell'aggiornamento|
-| a volte non riporta l'errore nella pagina larning|| | X |
+| a volte non riporta l'errore nella pagina larning quando eseguo un comando errato|| | X |
 | @metod e @cfrs appaiono 2 volte nel form ||  | X|
 | da rivedere la console in una pagina è nera in una è input:text in un altra textarea |X|  | |
 
