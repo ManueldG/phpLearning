@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         User::factory(10)->withPersonalTeam()->create();
+         //User::factory(10)->withPersonalTeam()->create();
 
 
         $this->call(CacheTableSeeder::class);
@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TeamInvitationsTableSeeder::class);
         $this->call(TeamUserTableSeeder::class);
         $this->call(TeamsTableSeeder::class);
-        $this->call(TmpTableSeeder::class);
+        //$this->call(TmpTableSeeder::class);
         $this->call(UsersTableSeeder::class);
     }
 }
