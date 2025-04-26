@@ -12,6 +12,7 @@
 | a volte non riporta l'errore nella pagina larning quando eseguo un comando errato|| | X |
 | @metod e @cfrs appaiono 2 volte nel form ||  | X|
 | da rivedere la console in una pagina è nera in una è input:text in un altra textarea |X|  | |
+| aggiungere logo github per riportare errori |X|  | |
 
  ## ToDo
  
@@ -27,6 +28,8 @@ console cercare di farla uguale ovunque
 
 pagination fatta su index -> show ne farei un'altra sulla barra laterale con la lista delle lezioni
 
+
+https://github.com/ManueldG/phpLearning/issues/new?title=title&body=From%20page:%20https:%2F%2Fapi.manueldellagala.it%2Fpage%0A%0A---
 
 
 ## License
@@ -277,6 +280,8 @@ corretto il problema in vendor\orangehill\iseed\src\Orangehill\Iseed\Iseed.php
             $elem = substr($elem, ++$start);
 
         };
+
+
 
 
  ## tradurre
