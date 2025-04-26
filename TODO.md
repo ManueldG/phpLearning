@@ -16,10 +16,18 @@
  ## ToDo
  
 spostare il database su mysql
+composer require orangehill/iseed
 
 impostare un admin per nascondere agli altri utenti le funzioni team e api token
+per ora creererei un admin con id 1 che svolge la funzione amministratore
 
 includere tutto il testo in __() per la gestione delle lingue
+
+console cercare di farla uguale ovunque
+
+pagination fatta su index -> show ne farei un'altra sulla barra laterale con la lista delle lezioni
+
+
 
 ## License
 
@@ -232,7 +240,43 @@ per le funzionalità dell'Admin
 Ho creato in .env una serie di opzioni per la configurazione di CodeSandBox 
 in fase di produzione .env non viene usato e ho creato /config/sandbox.php che preleva la configurazione da .env e viene compilato in fase di produzione posso creare un provider nel caso dovessi creare il file tramite artisan vendor:publish
 
+creata pagination:
 
+PageLearnController.php
+
+    $pages = PageLearn::paginate(3);
+
+in index.blade.php
+     
+     {{ $pages->links('components.paginator',['pages' => $pages]) }}
+
+posso personalizzarlo con
+
+    $paginator->nextPageUrl() Get the URL for the next page.
+    $paginator->previousPageUrl() Get the URL for the previous page.
+    $paginator->hasPages() Determine if there are enough items to split into multiple pages.
+    $paginator->firstItem()
+    $paginator->lastItem() Get the result number of the last item in the results.
+    $paginator->onFirstPage() Determine if the paginator is on the first page.
+    $paginator->previousPageUrl()
+    $paginator->currentPage()
+    $paginator->hasMorePages()
+
+installato pacchetto per esportare seed
+
+    composer require orangehill/iseed
+
+corretto il problema in vendor\orangehill\iseed\src\Orangehill\Iseed\Iseed.php
+
+    $schema = \DB::connection($this->databaseName)->getSchemaBuilder();
+        $listTable = $schema->getTableListing();
+
+        foreach($listTable as &$elem){
+
+            $start = strpos($elem,'.');
+            $elem = substr($elem, ++$start);
+
+        };
 
 
  ## tradurre
