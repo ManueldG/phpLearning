@@ -41,7 +41,7 @@
 
                         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mx-2 w-1/4 flex items-start justify-center" {{ $attributes }}>
 
-                            <x-aside />
+                            {{ $aside ?? "" }}
 
                         </div>
 

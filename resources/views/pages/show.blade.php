@@ -14,6 +14,14 @@
         </header>
 
     </x-slot>
+<!-- se mi trovo in page.show mostrare le lezioni di lato altrimnti i link home dashboard ...-->
+    <x-slot:aside >
+
+        <x-aside :pages="request()->routeIs('page.show') ? $page::paginate(5) : '' ">
+
+        </x-aside>
+
+    </x-slot:aside>
 
         <div class="flex flex-col grow">
 
@@ -28,7 +36,7 @@
                 </x-slot>
 
                 <x-slot name="form" >
-                   
+
                     <textarea id="id" class="w-full" name="code" type="text" placeholder="insert code" rows="7">
 {{ $page->example ?? "" }}
                     </textarea>
@@ -42,7 +50,7 @@
 
             <div class="w-full">
                 <div class="m-3 whitespace-pre-wrap overflow-x-auto">{!! $result ?? "<div class='text-red-700'>" . $error . "</div>" !!}</div>
-                
+
             </div>
 
         </div>
