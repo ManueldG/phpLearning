@@ -232,8 +232,47 @@ per le funzionalità dell'Admin
 Ho creato in .env una serie di opzioni per la configurazione di CodeSandBox 
 in fase di produzione .env non viene usato e ho creato /config/sandbox.php che preleva la configurazione da .env e viene compilato in fase di produzione posso creare un provider nel caso dovessi creare il file tramite artisan vendor:publish
 
+creata pagination:
 
+PageLearnController.php
 
+    $pages = PageLearn::paginate(3);
+
+in index.blade.php
+     
+     {{ $pages->links('components.paginator',['pages' => $pages]) }}
+
+posso personalizzarlo con
+
+    $paginator->nextPageUrl() Get the URL for the next page.
+    $paginator->previousPageUrl() Get the URL for the previous page.
+    $paginator->hasPages() Determine if there are enough items to split into multiple pages.
+    $paginator->firstItem()
+    $paginator->lastItem() Get the result number of the last item in the results.
+    $paginator->onFirstPage() Determine if the paginator is on the first page.
+    $paginator->previousPageUrl()
+    $paginator->currentPage()
+    $paginator->hasMorePages()
+
+installato pacchetto per esportare seed
+
+    composer require orangehill/iseed
+
+corretto il problema in vendor\orangehill\iseed\src\Orangehill\Iseed\Iseed.php
+
+    $schema = \DB::connection($this->databaseName)->getSchemaBuilder();
+        $listTable = $schema->getTableListing();
+
+        foreach($listTable as &$elem){
+
+            $start = strpos($elem,'.');
+            $elem = substr($elem, ++$start);
+
+        };
+    
+    modificato le pagine del tutorial con una pagination in page.index e un'altra nell'aside in page.show 
+
+    
 
  ## tradurre
  Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
@@ -271,6 +310,10 @@ Are you sure you want to delete your account? Once your account is deleted, all 
 
     php artisan view:cache
 
+    npm run build
+
+    il file hot in /public dice a laravel dove cercare i file per il frontend *.js *.css 
+    quando faccio npm run build lo cancello per fargli trovare i file in /public/build/assets
 
 
  ## Task svolti e consigli 
