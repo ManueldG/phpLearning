@@ -16,8 +16,6 @@
 
                     <a class="hover:underline  decoration-cyan-500 text-cyan-700 flex justify-center" href="{{ $pages->nextPageUrl() }}">{!! $pages->nextPageUrl() ? '&#8681;' : '' !!}</a>
 
-
-
                 @else
 
                     <li class=" my-5"><a class="hover:underline text-cyan-700 decoration-cyan-500" href="{{ route('dashboard') }}">Dashboard</a></li>
