@@ -29,7 +29,7 @@
 
             <!--<div class="flex justify-between gap-8 w-full my-2">-->
 
-                <div class=""><?php echo e(++$key); ?></div>
+                <div class=""><?php echo e(++$key + ($pages->currentPage() -1) * $pages->perPage()); ?></div>
                 <div class=""><?php echo e(Str::of($page->title)->limit(13)); ?></div>
                 <div class=""><?php echo e(Str::of($page->description)->limit(40)); ?></div>
 
@@ -57,6 +57,10 @@
 
 
     </div>
+
+    <?php echo e($pages->links('components.paginator',['pages' => $pages])); ?>
+
+
 
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

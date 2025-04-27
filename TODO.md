@@ -5,21 +5,32 @@
 |                | Da Fare                       | In esecuzione      | Fatto |
 |----------------|-------------------------------|--------------------|-------|
 |    Licenza     |Per ora uso quella di Laravel  |                    |       |
-|  spostare il DB su mysql |posso creare un seeder con l'export di sqlite ma <br>non è compatibile con mysql CSV  |   |       |
+|  spostare il DB su mysql | |   | Posso creare un seeder con Iseed e poi importarlo <br>in fase di migration|
 |    admin    || non ho creato dei ruoli ma semplicemnete l'id 1 è l'admin||
 | Lingue  || ho creato la struttura da aggioranre i termini mancano delle traduzioni nel profilo e nell'email||
 | pagina articolo inserito aggiornato cancellato ||  | ho aggiunto un redirect alla index con il messaggio dell'aggiornamento|
-| a volte non riporta l'errore nella pagina larning|| | X |
+| a volte non riporta l'errore nella pagina larning quando eseguo un comando errato|| | X |
 | @metod e @cfrs appaiono 2 volte nel form ||  | X|
 | da rivedere la console in una pagina è nera in una è input:text in un altra textarea |X|  | |
+| aggiungere logo github per riportare errori |X|  | |
 
  ## ToDo
  
 spostare il database su mysql
+composer require orangehill/iseed
 
 impostare un admin per nascondere agli altri utenti le funzioni team e api token
+per ora creererei un admin con id 1 che svolge la funzione amministratore
 
 includere tutto il testo in __() per la gestione delle lingue
+
+console cercare di farla uguale ovunque
+
+pagination fatta su index -> show ne farei un'altra sulla barra laterale con la lista delle lezioni
+
+
+https://github.com/ManueldG/phpLearning/issues/new?title=title&body=From%20page:%20https:%2F%2Fapi.manueldellagala.it%2Fpage%0A%0A---
+
 
 ## License
 

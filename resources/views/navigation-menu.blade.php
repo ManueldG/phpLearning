@@ -18,6 +18,19 @@
                             {{ __('Dashboard') }}
                         </x-nav-link>
                     </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link href="{{ route('page.index') }}" :active="request()->routeIs('page.index')">
+                            {{ __('Tutorial Php') }}
+                        </x-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link href="{{ route('console') }}" :active="request()->routeIs('console')">
+                            {{ __('Console') }}
+                        </x-nav-link>
+                    </div>
+
                 @endauth
 
             </div>

@@ -15,7 +15,7 @@ class PageLearnController extends Controller
      */
     public function index()
     {
-        $pages = PageLearn::paginate(3);
+        $pages = PageLearn::paginate(5);
 
         return view('pages.index',['pages'=> $pages]);
 
@@ -69,7 +69,6 @@ class PageLearnController extends Controller
         $error = null;
 
         $result = null;
-
 
          // redirect output to return
         $sandbox->capture_output = config('sandbox.capture_output');
