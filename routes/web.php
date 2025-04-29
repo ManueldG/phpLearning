@@ -33,6 +33,8 @@ Route::middleware([
         })->name('dashboard');
 
         Route::get('/console', [AskController::class,'action'])->name('console');
+        Route::resource('page',PageLearnController::class)->only(['show','index'])->parameters(['page'=>'page']);
+
 
 });
 
@@ -49,4 +51,4 @@ Route::middleware([
 
 });
 
-Route::resource('page',PageLearnController::class)->only(['show','index'])->parameters(['page'=>'page']);
+//Route::resource('page',PageLearnController::class)->only(['show','index'])->parameters(['page'=>'page']);

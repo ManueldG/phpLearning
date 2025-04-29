@@ -15,6 +15,12 @@
 
     </x-slot>
 
+    <x-slot:aside >
+
+        <x-aside />
+
+    </x-slot:aside>
+
         <div class="flex flex-col grow">
 
             <x-my-form submit="invio" class="grow" action="/console" method="get" target="_self" >

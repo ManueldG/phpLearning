@@ -1,4 +1,5 @@
 
+
 @if ($paginator->hasPages())
     <nav role="navigation" aria-label="{{ __('Pagination Navigation') }}" class="flex items-center justify-between my-4">
         <div class="flex justify-between flex-1 sm:hidden">
@@ -60,6 +61,8 @@
                     @endif
 
                     {{-- Pagination Elements --}}
+
+                    {{-- "Three Dots" Separator --}}
                     @foreach ($elements as $element)
                         {{-- "Three Dots" Separator --}}
                         @if (is_string($element))

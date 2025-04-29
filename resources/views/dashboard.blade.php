@@ -14,6 +14,12 @@
 
     </x-slot>
 
+    <x-slot:aside >
+
+        <x-aside  />
+
+    </x-slot:aside>
+
     <x-welcome />
 
 </x-app-layout>

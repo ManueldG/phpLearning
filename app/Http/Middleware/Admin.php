@@ -15,6 +15,7 @@ class Admin
      */
     public function handle(Request $request, Closure $next): Response
     {
+        
         if($request->user()->id == 1){
             return $next($request);
         }else{

@@ -20,7 +20,7 @@
 
             <!--<div class="flex justify-between gap-8 w-full my-2">-->
 
-                <div class="">{{ ++$key + ($pages->currentPage() -1) * $pages->perPage() }}</div>
+                <div class="">{{ ++$key + ($pages->currentPage() - 1) * $pages->perPage() }}</div>
                 <div class="">{{ Str::of($page->title)->limit(13) }}</div>
                 <div class="">{{ Str::of($page->description)->limit(40) }}</div>
 
