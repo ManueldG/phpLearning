@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link href="{{ route('page.index') }}" :active="request()->routeIs('page.index')">
+                        <x-nav-link href="{{ route('page.show', 1) }}" :active="request()->routeIs('page.index',1)">
                             {{ __('Tutorial Php') }}
                         </x-nav-link>
                     </div>
@@ -132,6 +132,10 @@
                                 <x-dropdown-link href="{{ route('mail.form') }}">
                                     {{ __('Mail') }}
                                 </x-dropdown-link>
+
+                                <x-dropdown-link href="{{ route('page.index') }}">
+                                    {{ __('Lessons') }}
+                                </x-dropdown-link>
                             @endif
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
@@ -175,11 +179,19 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         @auth
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
+            <div class="pt-2 pb-3 space-y-1">
+                <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    {{ __('Dashboard') }}
+                </x-responsive-nav-link>
+
+                <x-responsive-nav-link href="{{ route('page.show',1) }}" :active="request()->routeIs('page.show')">
+                    {{ __('Tutorial Php') }}
+                </x-responsive-nav-link>
+
+                <x-responsive-nav-link href="{{ route('console') }}" :active="request()->routeIs('console')">
+                    {{ __('console') }}
+                </x-responsive-nav-link>
+            </div>
         @endauth
         @guest
 
@@ -230,6 +242,10 @@
                 @if(Auth::user()->id==1)
                     <x-responsive-nav-link href="{{ route('mail.form') }}" :active="request()->routeIs('mail.form')">
                         {{ __('Mail') }}
+                    </x-responsive-nav-link>
+
+                    <x-responsive-nav-link href="{{ route('page.index') }}" :active="request()->routeIs('page.index')">
+                        {{ __('Lessons') }}
                     </x-responsive-nav-link>
                 @endif
 

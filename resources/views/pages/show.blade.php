@@ -49,11 +49,39 @@
             </x-my-form>
 
             <div class="w-full">
+
                 <div class="m-3 whitespace-pre-wrap overflow-x-auto">{!! $result ?? "<div class='text-red-700'>" . $error . "</div>" !!}</div>
 
             </div>
 
-        </div>
+            <div class="flex flex-row justify-center gap-3  sm:hidden">
+
+               
+
+                @for ( $i = count($page::all()) ; $i > 0; $i--)               
+                
+                    @if($page->id > $page::all()[$i-1]->id )
+                        <a class = "relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-100 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-sky-100 active:text-gray-500 transition ease-in-out duration-150 dark:bg-sky-500 dark:border-gray-600 dark:text-gray-100 dark:focus:border-blue-700 dark:active:bg-sky-500 dark:active:text-gray-300" href="{{ route('page.show', $page::all()[$i-1]->id) }}"> {!! __('pagination.previous') !!}</a>     
+                        @break                          
+                    @endif            
+    
+                @endfor
+    
+                @foreach ($page::all() as $elem)    
+                
+        
+                    @if ($page->id < $elem->id )
+
+                        <a class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-100 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-sky-100 active:text-gray-500 transition ease-in-out duration-150 dark:bg-sky-500 dark:border-gray-600 dark:text-gray-100 dark:focus:border-blue-700 dark:active:bg-sky-500 dark:active:text-gray-300" href="{{ route('page.show', $elem->id) }}"> {!! __('pagination.next') !!}</a>
+                        @break
+
+                    @endif
+        
+                @endforeach
+
+            </div>
+
+        </div>      
 
 </x-app-layout>
 
