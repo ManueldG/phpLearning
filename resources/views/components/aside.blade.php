@@ -1,10 +1,10 @@
 <aside class="hidden sm:block">
 
     <div class="py-8">
-        <div class="flex justity-center items-center" >
+        <div class="flex justify-center items-center" >
 
             <ul class="flex flex-col justify-center">
-                
+
                 @if (isset($pages))
 
                     <a class="hover:underline  decoration-cyan-500 text-cyan-700 flex justify-center" href="{{ $pages->previousPageUrl() }}">{!! $pages->previousPageUrl() ? '&#8679;' : '' !!} </a>
