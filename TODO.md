@@ -280,9 +280,10 @@ corretto il problema in vendor\orangehill\iseed\src\Orangehill\Iseed\Iseed.php
             $elem = substr($elem, ++$start);
 
         };
+    
+    modificato le pagine del tutorial con una pagination in page.index e un'altra nell'aside in page.show 
 
-
-
+    
 
  ## tradurre
  Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
@@ -320,6 +321,10 @@ Are you sure you want to delete your account? Once your account is deleted, all 
 
     php artisan view:cache
 
+    npm run build
+
+    il file hot in /public dice a laravel dove cercare i file per il frontend *.js *.css 
+    quando faccio npm run build lo cancello per fargli trovare i file in /public/build/assets
 
 
  ## Task svolti e consigli 

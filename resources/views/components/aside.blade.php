@@ -3,7 +3,7 @@
     <div class="py-8">
         <div class="flex justify-center items-center" >
 
-            <ul class="flex flex-col justify-center">
+            <ul class="flex flex-col justify-center items-center">
 
                 @if (isset($pages))
 
@@ -16,8 +16,6 @@
                     @endforeach
 
                     <a class="hover:underline  decoration-cyan-500 text-cyan-700 flex justify-center" href="{{ $pages->nextPageUrl() }}">{!! $pages->nextPageUrl() ? '&#8681;' : '' !!}</a>
-
-
 
                 @else
 

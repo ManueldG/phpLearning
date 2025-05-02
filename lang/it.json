@@ -2,8 +2,8 @@
     "global": {
         "ok": "Okay",
         "cancel": "Cancel",
-        "next": "Next",
-        "previous": "Previous"
+        "next": "Successivo",
+        "previous": "Precedente"
       },
     "Remember me": "Ricordami",
     "Forgot your password?": "Hai dimenticato la password?",
