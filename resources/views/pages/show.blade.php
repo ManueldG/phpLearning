@@ -61,7 +61,7 @@
                 @for ( $i = count($page::all()) ; $i > 0; $i--)
 
                     @if($page->id > $page::all()[$i-1]->id )
-                        <a class = "relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-900 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-sky-100 active:text-gray-500 transition ease-in-out duration-150 dark:bg-sky-500 dark:border-gray-600 dark:text-gray-100 dark:focus:border-blue-700 dark:active:bg-sky-500 dark:active:text-gray-300" href="{{ route('page.show', $page::all()[$i-1]->id) }}"> {!! __('pagination.previous') !!}</a>
+                        <a class = "  relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium      leading-5 rounded-md focus:outline-none focus:ring ring-gray-300        border  border-gray-300 focus:border-blue-300         active:bg-sky-100 bg-white           hover:text-gray-500 active:text-gray-500 text-gray-900          transition ease-in-out duration-150           dark:active:text-gray-300 dark:text-gray-100      dark:bg-gray-900 dark:active:bg-sky-500      dark:border-gray-600 dark:focus:border-gray-700   " href="{{ route('page.show', $page::all()[$i-1]->id) }}"> {!! __('pagination.previous') !!}</a>
                         @break
                     @endif
 
@@ -72,7 +72,8 @@
 
                     @if ($page->id < $elem->id )
 
-                        <a class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-900 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-sky-100 active:text-gray-500 transition ease-in-out duration-150 dark:bg-sky-500 dark:border-gray-600 dark:text-gray-100 dark:focus:border-blue-700 dark:active:bg-sky-500 dark:active:text-gray-300" href="{{ route('page.show', $elem->id) }}"> {!! __('pagination.next') !!}</a>
+                        <a class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium      leading-5 rounded-md focus:outline-none focus:ring ring-gray-300        border  border-gray-300 focus:border-blue-300         active:bg-sky-100 bg-white           hover:text-gray-500 active:text-gray-500 text-gray-900          transition ease-in-out duration-150           dark:active:text-gray-300 dark:text-gray-100      dark:bg-gray-900 dark:active:bg-sky-500      dark:border-gray-600 dark:focus:border-gray-700  " href="{{ route('page.show', $elem->id) }}"> {!! __('pagination.next') !!}</a>
+
                         @break
 
                     @endif
