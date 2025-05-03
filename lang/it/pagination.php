@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'previous' => '&laquo; Previous',
-    'next' => 'Next &raquo;',
+    'previous' => '&laquo; Precedente',
+    'next' => 'Successivo &raquo;',
     'showing' => 'Visualizzati da ',
     'of' => 'di',
     'to' => 'a',
